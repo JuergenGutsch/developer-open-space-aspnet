@@ -1,0 +1,14 @@
+﻿<h3>MyComponent</h3>
+
+<p>@Query</p>
+
+@code {
+
+    [Parameter]
+    [SupplyParameterFromQuery(Name="q")]
+    public string? Query { get; set; }
+
+    [Parameter]
+    [EditorRequired]
+    public string? Name { get; set; }
+}

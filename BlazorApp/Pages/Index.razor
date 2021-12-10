@@ -1,0 +1,37 @@
+﻿@page "/"
+@using BlazorApp.Components
+
+<PageTitle>Index</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="new description" />
+
+</HeadContent>
+
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<MyComponent Name="Test"></MyComponent>
+
+<DynamicComponent Type="@typeof(MyComponent)"></DynamicComponent>
+
+@*
+    Pseudo Code
+    <List Items="@Items">
+    <ListItem>
+    <p>Hallo</p>
+    </ListItem>
+    </List> *@
+
+
+<ErrorBoundary>
+    <ChildContent>
+        <Counter />
+    </ChildContent>
+    <ErrorContent>Sorry, an error happened!</ErrorContent>
+</ErrorBoundary>
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
